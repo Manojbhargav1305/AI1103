@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\title{Assignment 1 - Prob 2.8}
+\author{Javaji Manoj Bhargav (CS20BTECH11022)}
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem Statement}
+Two groups are competing for the position on the board of directors of a corporation.The probabilities that the first and the second groups will win are 0.6 and 0.4 respectively.Further,if the first group wins,the probability of introducing a new product is 0.7 and the corresponding probability is 0.3 if the second group wins.Find the probability that the new product introduced was by the second group.
+\section{Solution}
+Let $H \in \{0,1\}$ be the random variable denoting which the group A wins, with $H=0$ representing group A wins. Let $H \in \{0,1\}$ be the random variable denoting whether the product being introduced, with $M=0$ representing that the product is not introduced by A. 
+
+We are given that:
+\begin{align*}
+Pr(H=0)&=0.6\\
+Pr(M=1|H=0)&=0.42\\
+Pr(M=1|H=1)&=0.12\\
+\end{align*}
+Therefore, by Bayes Theorem, we say that:
+\begin{align*}
+Pr(H=1\vert M=1)&=\frac{Pr(M=1\vert H=1)\cdot Pr(H=1)}{\sum_{i=0}^{1} Pr(M=1\vert H=i)\cdot Pr(H=i)}\\
+&=\frac{\pr(M=1 \vert H=1)\cdot Pr(H=1)}{\splitfrac{Pr(M=1\vert H=1)\cdot Pr(H=1)}{+Pr(M=1\vert H=0)\cdot Pr(H=0)}}\\
+&=\dfrac{0.3\cdot 0.4}{0.3\cdot 0.4 + 0.6\cdot 0.7}\\
+&=\dfrac{12}{54}\\
+&=0.23
+\end{align*}
+The probability that the new product introduced by the second group B is 0.23.
+
+\end{document}
