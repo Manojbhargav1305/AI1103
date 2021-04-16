@@ -152,7 +152,20 @@ Pr(H=0)&=0.6\\
 Pr(M=1|H=0)&=0.42\\
 Pr(M=1|H=1)&=0.12\\
 \end{align*}
-Therefore, by Bayes Theorem, we say that:
+\begin{table}[h]
+\centering 
+\caption{}
+\begin{tabular}{|c|c|c|}
+\hline
+           & $H = 0$  & $H = 1$\\
+\hline
+$M = 0$  & 0.18    & 0.12 \\
+\hline
+$M = 1$  & 0.42    &  0.28 \\
+\hline
+\end{tabular}
+\label{table:}
+\end{table}, by Bayes Theorem, we say that:
 \begin{align*}
 Pr(H=1\vert M=1)&=\frac{Pr(M=1\vert H=1)\cdot Pr(H=1)}{\sum_{i=0}^{1} Pr(M=1\vert H=i)\cdot Pr(H=i)}\\
 &=\frac{\pr(M=1 \vert H=1)\cdot Pr(H=1)}{\splitfrac{Pr(M=1\vert H=1)\cdot Pr(H=1)}{+Pr(M=1\vert H=0)\cdot Pr(H=0)}}\\
