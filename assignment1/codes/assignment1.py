@@ -12,8 +12,8 @@ from scipy.stats import bernoulli
 
 #Raw probability data given in the question
 
-prob_def_a=0.6*0.7# Probability that the product was introduced by A
-prob_def_b=0.4*0.3# Probability that the product was introduced by B
+prob_def_a=0.6*0.7+0.4*0.7# Probability that the product was introduced by A
+prob_def_b=0.4*0.3+0.6*0.3# Probability that the product was introduced by B
 
 trials=int(1e7)
  #Calculating the bernoulli distributions for 10000000 trials with p being the probability of the product was introduced by A,or B.
