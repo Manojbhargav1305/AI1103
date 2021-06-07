@@ -144,14 +144,7 @@ https://github.com/Manojbhargav1305/AI1103/blob/main/Assignment1/Assignment1.tex
 \section*{Problem(2.8)}
 Two groups are competing for the position on the board of directors of a corporation.The probabilities that the first and the second groups will win are 0.6 and 0.4 respectively.Further,if the first group wins,the probability of introducing a new product is 0.7 and the corresponding probability is 0.3 if the second group wins.Find the probability that the new product introduced was by the second group.
 \section*{Solution}
-Let $H \in \{0,1\}$ be the random variable denoting which the group A wins, with $H=0$ representing group A wins. Let $M \in \{0,1\}$ be the random variable denoting whether the product being introduced, with $M=0$ representing that the product is not introduced by A. 
-
-We are given that:
-\begin{align*}
-Pr(H=0)&=0.6\\
-Pr(M=1|H=0)&=0.42\\
-Pr(M=1|H=1)&=0.12\\
-\end{align*}
+let $M \in \{0,1\}$ be a random variable such that $M=0$ represents product is not introduced by winning group and $M=1$ represents product is introduced by the winning group.let $H \in \{0,1\}$ be another random variable such that $H=0$ represents that group A wins,$H=1$ represents that group B wins.
 \begin{table}[h]
 \centering 
 \caption{}
@@ -159,19 +152,20 @@ Pr(M=1|H=1)&=0.12\\
 \hline
            & $H = 0$  & $H = 1$\\
 \hline
-$M = 0$  & 0    & 0.12 \\
+$M = 0$  & o.18  & 0.28 \\
 \hline
-$M = 1$  & 0.42    &  0 \\
+$M = 1$  & 0.42    &  0.12 \\
 \hline
 \end{tabular}
 \label{table:}
-\end{table}, by Bayes Theorem, we say that:
-\begin{align*}
-Pr(H=1\vert M=1)&=\frac{Pr(M=1\vert H=1)\cdot Pr(H=1)}{\sum_{i=0}^{1} Pr(M=1\vert H=i)\cdot Pr(H=i)}\\
-&=\frac{\pr(M=1 \vert H=1)\cdot Pr(H=1)}{\splitfrac{Pr(M=1\vert H=1)\cdot Pr(H=1)}{+Pr(M=1\vert H=0)\cdot Pr(H=0)}}\\
-&=\dfrac{0.3\cdot 0.4}{0.3\cdot 0.4 + 0.6\cdot 0.7}\\
-&=\dfrac{12}{54}\\
-&=0.23
-\end{align*}
-The probability that the new product introduced by the second group B is 0.23.
+\end{table}
+we know that Bayes theorem:
+$P(A|B)=\frac{P(A\cap B)}{P(B)} ,if$P(B)$\neq 0$. 
+so required probability that new product was introduced by group B be P.
+\begin{align}
+ P=Pr(M=0|H=0)+Pr(M=1|H=1)\\
+ =0.18+0.12 \\ 
+ =0.30\\
+\end{align}
+hence the required probability that the product was introduced by the second group is 0.30
 \end{document}
