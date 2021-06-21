@@ -146,7 +146,17 @@ https://github.com/Manojbhargav1305/AI1103/blob/main/Assignment1/Assignment1.tex
 \section*{GATE-EC Q.50}
 The probability density function(PDF) of a random variable X is as shown in the fig.
 The corresponding cumulative distribution function (CDF) has the form
-\includegraphics[width=0.5\textwidth]{fig1.png}
+\begin{tikzpicture}
+\draw[thick,->] (0,0) -- (4.5,0)node[anchor=north west] {x axis};
+\draw[thick,->] (0,0) -- (0,4.5)node[anchor=north west] {y axis};
+\draw[thick,->] (0,0) -- (-4.5,0);
+\draw (-1,0) -- (0,1)-- (1,0);
+\foreach \x in {0,1,2,3,4}
+   \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+\foreach \y in {0,1,2,3,4}
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+
+\end{tikzpicture}
 \section*{Solution}
 The given PDF graph can be represented by the function $f(x)$.
 \begin{align}f(x)=
@@ -157,8 +167,16 @@ The given PDF graph can be represented by the function $f(x)$.
 \end{align}
 Now,we need to find the corresponding CDF graph for f(x).let the CDF represented by F(x).we know that
 \begin{equation}
- F(x)=\int_{-\infty}^{x}f(x)dx   
-\end{equation}
+ F(x)=\int_{-\infty}^{x}f(x)dx 
+ \end{equation}
+\begin{align}
+for x\in[-1,0) :F(x)=\int_{-1}^{x}(1+x)dx
+                    =x+\frac{x^2}{2}+\frac{1}{2}
+\end{align}
+\begin{align}
+for x\in(0,1] ;F(x)=\int_{0}^{x}(1-x)dx=x-\frac{x^2}{2}+\frac{1}{2}
+\end{align}
+
 from the equation we get 
 \begin{align}F(x)=
 \begin{cases}
@@ -168,8 +186,10 @@ from the equation we get
 \end{cases}
 \end{align}
 Therefore the graph for the corresponding CDF is
-\includegraphics[width=0.5\textwidth]{fig2.png}
+\includegraphics[width=0.5\textwidth]{fig2.jpg}
 
 
 \end{document}
+
+
 
